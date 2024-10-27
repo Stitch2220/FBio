@@ -14,7 +14,7 @@ i = 0
 emg_data = []
 
 try:
-    while len(emg_data) < 5000:
+    while len(emg_data) < 20000:
         if arduino.in_waiting > 0:
             value = arduino.readline().decode('utf-8').strip()
             timestamp, data = map(float, value.split(","))
